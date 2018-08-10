@@ -30,6 +30,21 @@ class Deck:
         return (self.allcards[:26], self.allcards[26:])
 
 
+class Hand:
+
+    def __init__(self, cards):
+        self.cards = cards
+
+    def __str__(self):
+        return "Contains {} cards".format(len(self.cards))
+
+    def add(self, added_cards):
+        self.cards.extend(added_cards)
+
+    def remove_card(self):
+        return self.cards.pop()
+
+
 start = "Welcome to War, let's begin..."
 
 print(start)
